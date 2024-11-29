@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome </h1>
+    <ul>
+        {% for category in categories %}
+            <li><a href="{% url 'product_list' category.id %}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+    
+    Best Flagship   
+    <ul>
+        {% for product in products %}
+            <li><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></li>
+        {% endfor %}
+    </ul>
+    Best Camera   
+    <ul>
+        {% for product in products %}
+            <li><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>
